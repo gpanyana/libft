@@ -6,8 +6,18 @@
 /*   By: gpanyana <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 16:32:38 by gpanyana          #+#    #+#             */
-/*   Updated: 2019/05/21 16:33:26 by gpanyana         ###   ########.fr       */
+/*   Updated: 2019/05/21 18:01:49 by gpanyana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+int		ft_isalnum(int c)
+{
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+		return (1);
+	else if (c >= 48 && c <= 57)
+		return (1);
+	else
+		return (0);
+}
