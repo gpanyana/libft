@@ -1,33 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Libft.h                                            :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gpanyana <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 09:34:44 by gpanyana          #+#    #+#             */
-/*   Updated: 2019/05/23 09:31:48 by gpanyana         ###   ########.fr       */
+/*   Created: 2019/05/23 09:49:10 by gpanyana          #+#    #+#             */
+/*   Updated: 2019/05/23 10:24:46 by gpanyana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <unistd.h>
-# include <ctype.h>
-# include <stdlib.h>
-# include <string.h>
+/*#include "libft.h"*/
 
-void	ft_putchar(char c);
+char	*ft_strcpy(char *dst, const char *src)
+{
+	int i;
 
-size_t	ft_strlen(const char *str);
+	i = 0;
+	while (src[i] != '\0' && dst[i] != '\0')
+	{
+		dst[i] = src[i];
+			i++;
+	}
+	/*dst[i] = '\0';*/
+	return (dst);
+}
 
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-
-int		ft_tolower(int c);
-int		ft_toupper(int c);
-
-#endif
+int		main()
+{
+	char *s = "Hello";
+	char *t = "bye-bye";
+	
+	t = ft_strcpy(t,s);
+	return (0);
+}
