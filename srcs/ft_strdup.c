@@ -6,7 +6,7 @@
 /*   By: gpanyana <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 09:07:40 by gpanyana          #+#    #+#             */
-/*   Updated: 2019/05/23 18:25:30 by gpanyana         ###   ########.fr       */
+/*   Updated: 2019/05/24 18:05:51 by gpanyana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,16 @@
 char	*ft_strdup(const char *s1)
 {
 	int i;
-	char *other;
+	int length;
+	char *str;
 
+	length = 0;
+	while (s1[length])
+		length++;
+	str = (char*)malloc(sizeof(*str) * (length + 1);
 	i = 0;
+	while (
+	{
+		s1[length] = 
+	}
 }
