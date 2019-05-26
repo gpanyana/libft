@@ -6,7 +6,7 @@
 /*   By: gpanyana <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:34:44 by gpanyana          #+#    #+#             */
-/*   Updated: 2019/05/23 09:31:48 by gpanyana         ###   ########.fr       */
+/*   Updated: 2019/05/26 17:06:28 by gpanyana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,17 @@
 # include <string.h>
 
 void	ft_putchar(char c);
-
 size_t	ft_strlen(const char *str);
 
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
+char	*ft_strdup(const char *s1);
+//int		ft_isalpha(int c);
+//int		ft_isdigit(int c);
+//int		ft_isalnum(int c);
+//int		ft_isascii(int c);
+//int		ft_isprint(int c);
 
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 
+void	ft_putstr(char *s);
 #endif
