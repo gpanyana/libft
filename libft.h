@@ -6,11 +6,8 @@
 /*   By: gpanyana <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:34:44 by gpanyana          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2019/05/26 17:06:28 by gpanyana         ###   ########.fr       */
-=======
+/*   Updated: 2019/05/27 18:34:38 by gpanyana         ###   ########.fr       */
 /*   Updated: 2019/05/24 18:07:30 by gpanyana         ###   ########.fr       */
->>>>>>> 36276063ea1ff2675efb963ae724fef20b4e3693
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +21,9 @@
 void	ft_putchar(char c);
 size_t	ft_strlen(const char *str);
 char	*ft_strdup(const char *s1);
+char	*ft_strcpy(char *dst, const char *src);
+char	*ft_strncat(char *restrict s1, const char *restrict s2, size_t n);
 
-char	*ft_strdup(const char *s1);
 //int		ft_isalpha(int c);
 //int		ft_isdigit(int c);
 //int		ft_isalnum(int c);
