@@ -6,7 +6,7 @@
 /*   By: gpanyana <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/26 16:57:38 by gpanyana          #+#    #+#             */
-/*   Updated: 2019/05/27 10:41:41 by gpanyana         ###   ########.fr       */
+/*   Updated: 2019/05/28 10:21:27 by gpanyana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ int		main(void)
 	char	*s;
 	char	*w;
 
-	w = strcpy("good");
+	w = strdup("good");
 	ft_putstr(w);
 
 	ft_putchar('\n');
-	s = ft_strcpy("hello");
+	s = ft_strdup("hello");
 	ft_putstr(s);
 	return (0);
 }

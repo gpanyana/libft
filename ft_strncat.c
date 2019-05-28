@@ -6,7 +6,7 @@
 /*   By: gpanyana <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 17:13:26 by gpanyana          #+#    #+#             */
-/*   Updated: 2019/05/27 18:34:15 by gpanyana         ###   ########.fr       */
+/*   Updated: 2019/05/28 15:55:27 by gpanyana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,9 @@ char	*ft_strncat(char *restrict s1, const char *restrict s2, size_t n)
 	j = 0;
 	while (j < n && s2[j] != '\0')
 	{
-		s1[i] = s2[j];
+		s1[i + j] = s2[j];
 		j++;
-		i++;
 	}
-	s1[i] = '\0';
+	s1[i + j] = '\0';
 	return (s1);
 }

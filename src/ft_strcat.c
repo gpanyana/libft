@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gpanyana <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 09:07:40 by gpanyana          #+#    #+#             */
-/*   Updated: 2019/05/28 10:13:53 by gpanyana         ###   ########.fr       */
+/*   Created: 2019/05/28 15:26:05 by gpanyana          #+#    #+#             */
+/*   Updated: 2019/05/28 17:41:33 by gpanyana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
-{
-	char	*w;
-	int		i;
+char	*ft_strcat(char *restrict s1, const char *restrict s2)
+{/*
+	size_t i;
+	size_t j;
 
 	i = 0;
-	if (!(w = (char *)malloc(sizeof(char) * (ft_strlen(s1) + 1))))
-		return (NULL);
-	while (s1[i])
-	{
-		w[i] = s1[i];
+	while (s1[i] != '\0')
 		i++;
+	j = 0;
+	while (s2[j] != '\0')
+	{
+		s1[i + j] = s2[j];
+		j++;
 	}
-	w[i] = '\0';
-   	return (w);
+	s1[i + j] = '\0';
+	return (s1);*/
+	return(ft_strncat(s1, s2, ft_strlen(s2));
 }
