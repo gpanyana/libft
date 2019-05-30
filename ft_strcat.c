@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gpanyana <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 09:49:10 by gpanyana          #+#    #+#             */
-/*   Updated: 2019/05/30 17:39:18 by gpanyana         ###   ########.fr       */
+/*   Created: 2019/05/28 15:26:05 by gpanyana          #+#    #+#             */
+/*   Updated: 2019/05/30 17:45:29 by gpanyana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dst, const char *src)
+char	*ft_strcat(char *restrict s1, const char *restrict s2)
 {
-	int i;
+	size_t i;
+	size_t j;
 
 	i = 0;
-	while (src[i] != '\0')
+	while (s1[i] != '\0')
+		i++;
+	j = 0;
+	while (s2[j] != '\0')
 	{
-		dst[i] = src[i];
-			i++;
+		s1[i + j] = s2[j];
+		j++;
 	}
-	dst[i] = '\0';
-	return (dst);
+	s1[i + j] = '\0';
+	return (s1);
 }

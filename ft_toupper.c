@@ -6,13 +6,13 @@
 /*   By: gpanyana <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:00:43 by gpanyana          #+#    #+#             */
-/*   Updated: 2019/05/21 15:34:30 by gpanyana         ###   ########.fr       */
+/*   Updated: 2019/05/30 17:42:08 by gpanyana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_tolower(int c)
+int		ft_toupper(int c)
 {
 	if ((c >= 97) && (c <= 122))
 		return (c - 32);
