@@ -6,7 +6,7 @@
 /*   By: gpanyana <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 09:49:10 by gpanyana          #+#    #+#             */
-/*   Updated: 2019/05/30 17:39:18 by gpanyana         ###   ########.fr       */
+/*   Updated: 2019/06/03 15:49:07 by gpanyana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strcpy(char *dst, const char *src)
 	while (src[i] != '\0')
 	{
 		dst[i] = src[i];
-			i++;
+		i++;
 	}
 	dst[i] = '\0';
 	return (dst);
