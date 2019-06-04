@@ -6,7 +6,7 @@
 /*   By: gpanyana <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 15:30:24 by gpanyana          #+#    #+#             */
-/*   Updated: 2019/06/03 15:30:33 by gpanyana         ###   ########.fr       */
+/*   Updated: 2019/06/04 15:37:13 by gpanyana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ char	*ft_strncpy(char *dst, const char *src, size_t len);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strcat(char *restrict s1, const char *restrict s2);
 char	*ft_strchr(const char *s, int c);
+char	*ft_strstr(const char *haystack, const char *needle);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
