@@ -6,7 +6,7 @@
 /*   By: gpanyana <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 18:09:19 by gpanyana          #+#    #+#             */
-/*   Updated: 2019/06/05 18:26:57 by gpanyana         ###   ########.fr       */
+/*   Updated: 2019/06/06 14:41:49 by gpanyana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 void	ft_putendl(char const *s)
 {
-	*s = (unsigned char)str;
-
-	ft_putstr(str);
+	ft_putstr((char *)s);
 	write(1, "\n", 1);
 }

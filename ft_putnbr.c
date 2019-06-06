@@ -1,33 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gpanyana <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/05 10:37:55 by gpanyana          #+#    #+#             */
-/*   Updated: 2019/06/06 14:22:01 by gpanyana         ###   ########.fr       */
+/*   Created: 2019/06/05 17:56:47 by gpanyana          #+#    #+#             */
+/*   Updated: 2019/06/06 15:00:03 by gpanyana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strncmp(const char *s1, const char *s2, size_t n)
+void	ft_putnbr(int n)
 {
-	size_t			i;
-	unsigned char	*str1;
-	unsigned char	*str2;
-
-	if (n == 0)
-		return (0);
-	str1 = (unsigned char *)s1;
-	str2 = (unsigned char *)s2;
-	i = 0;
-	while (str1[i] != '\0' && str2[i] != '\0' && i < n)
+	if (n == -2147483648)
 	{
-		if (str1[i] != str2[i])
-			return (str1[i] - str2[i]);
-		i++;
+		ft_putstr("-2147483648");
+		return ;
 	}
-	return (str1[i] - str2[i]);
+	if (n < 0)
+	{
+		ft_putchar('-');
+		n = -n;
+	}
+	if (n >= 10)
+	{
+		ft_putnbr(n / 10);
+		ft_putnbr(n % 10);
+	}
+	if (n < 10)
+	{
+		ft_putchar(n + 48);
+	}
 }
