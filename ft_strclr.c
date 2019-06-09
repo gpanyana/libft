@@ -17,6 +17,8 @@ void	ft_strclr(char *s)
 	size_t i;
 
 	i = 0;
+	if (!(s))
+		return ;
 	if (*s == '\0')
 		return ;
 	while (s[i] != '\0')
