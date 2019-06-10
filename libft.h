@@ -6,7 +6,7 @@
 /*   By: gpanyana <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 15:30:24 by gpanyana          #+#    #+#             */
-/*   Updated: 2019/06/07 16:02:36 by gpanyana         ###   ########.fr       */
+/*   Updated: 2019/06/10 17:47:09 by gpanyana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <string.h>
 
 size_t	ft_strlen(const char *str);
+size_t	ft_strlcat(char *dst, const char *src, size_t n);
 char	*ft_strdup(const char *s1);
 char	*ft_strcpy(char *dst, const char *src);
 char	*ft_strncat(char *restrict s1, const char *restrict s2, size_t n);
@@ -41,7 +42,10 @@ int		ft_isprint(int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 
+void	*ft_memset(void *b, int c, size_t len);
 void	ft_strclr(char *s);
+void	ft_striter(char *s, void (*f)(char *));
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 void	ft_putchar(char c);
 void	ft_putstr(char *s);
 void	ft_putendl(const char *s);

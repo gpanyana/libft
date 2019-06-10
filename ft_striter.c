@@ -1,36 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*   ft_striter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gpanyana <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/07 12:35:43 by gpanyana          #+#    #+#             */
-/*   Updated: 2019/06/10 11:55:08 by gpanyana         ###   ########.fr       */
+/*   Created: 2019/06/10 11:12:24 by gpanyana          #+#    #+#             */
+/*   Updated: 2019/06/10 11:51:50 by gpanyana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strequ(char const *s1, char const *s2)
+void	ft_striter(char *s, void (*f)(char *))
 {
-	size_t	i;
-	int		k;
+	size_t i;
 
 	i = 0;
-	if (!(s1 && s2))
-		return (0);
-	if (*s1 == '\0' || *s2 == '\0')
-		return (0);
-	if (*s1 == '\0' && *s2 == '\0')
-		return (1);
-	while (*s1 != '\0' && *s2 != '\0')
+	if (f && s)
 	{
-		k = ft_strcmp((char *)s1, (char *)s2);
-		if (k == 0)
-			return (1);
-		else
-			return (0);
+		while (s[i] != '\0')
+		{
+			f(s + i);
+			i++;
+		}
 	}
-	return (0);
 }

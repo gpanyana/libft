@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gpanyana <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/07 12:35:43 by gpanyana          #+#    #+#             */
-/*   Updated: 2019/06/10 11:55:08 by gpanyana         ###   ########.fr       */
+/*   Created: 2019/05/28 16:05:30 by gpanyana          #+#    #+#             */
+/*   Updated: 2019/06/10 15:38:28 by gpanyana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strequ(char const *s1, char const *s2)
+size_t		ft_strlcat(char *dst, const char *src, size_t n)
 {
-	size_t	i;
-	int		k;
+	size_t i;
+	size_t dstlen;
+	size_t srclen;
 
 	i = 0;
-	if (!(s1 && s2))
-		return (0);
-	if (*s1 == '\0' || *s2 == '\0')
-		return (0);
-	if (*s1 == '\0' && *s2 == '\0')
-		return (1);
-	while (*s1 != '\0' && *s2 != '\0')
+	dstlen = ft_strlen(dst);
+	srclen = ft_strlen(src);
+	if (n <= dstlen)
+		return (srclen + n);
+	while (dst[i] != '\0' && i < (n - 1))
+		i++;
+	while (i < (n - 1) && *src)
 	{
-		k = ft_strcmp((char *)s1, (char *)s2);
-		if (k == 0)
-			return (1);
-		else
-			return (0);
+		dst[i] = *src;
+		i++;
+		src++;
 	}
-	return (0);
+	dst[i] = '\0';
+	return (dstlen + srclen);
 }
