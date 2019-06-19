@@ -6,7 +6,7 @@
 /*   By: gpanyana <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/18 10:33:07 by gpanyana          #+#    #+#             */
-/*   Updated: 2019/06/18 18:37:34 by gpanyana         ###   ########.fr       */
+/*   Updated: 2019/06/19 17:30:14 by gpanyana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,26 @@
 
 char	*ft_strtrim(char const *s)
 {
-	size_t	i;
+	int		i;
+	int		len;
 	char	*fresh;
 
 	if (s == NULL)
 		return (NULL);
-	fresh = NULL;
-	if (!(fresh = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1))))
+	len = ft_strlen(s);
+	while (s[len - 1] == ' ' || s[len - 1] == '\t' || s[len - 1] == '\n')
+		len--;
+	i = -1;
+	while (s[++i] == ' ' || s[i] == '\t' || s[i] == '\n')
+		len--;
+	if (len <= 0)
+		len = 0;
+	if (!(fresh = (char*)malloc(sizeof(char) * (len + 1))))
 		return (NULL);
-	i = 0;
-	while (s[i] != '\0')
-	{
-		if (s[i] != ' ' || s[i] != '\n' || s[i] != '\t')
-		{
-
-		}
-
-
-
-		
-	}
+	s += i;
+	i = -1;
+	while (++i < len)
+		fresh[i] = *s++;
+	fresh[i] = '\0';
 	return (fresh);
 }
