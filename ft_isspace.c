@@ -1,29 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gpanyana <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/10 18:14:00 by gpanyana          #+#    #+#             */
-/*   Updated: 2019/06/24 12:21:55 by gpanyana         ###   ########.fr       */
+/*   Created: 2019/06/24 10:12:19 by gpanyana          #+#    #+#             */
+/*   Updated: 2019/06/24 10:42:41 by gpanyana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+int		ft_isspace(int c)
 {
-	size_t			i;
-	unsigned char	*str;
-
-	str = s;
-	if (n == 0)
-		return ;
-	i = 0;
-	while (i < n)
-	{
-		str[i++] = 0;
-	}
-	return ;
+	return (c == '\t' || c == '\n' || c == '\v' || c == '\f' || c == '\r' \
+			|| c == '\f' || c == ' ');
 }
