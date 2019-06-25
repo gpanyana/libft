@@ -6,7 +6,7 @@
 /*   By: gpanyana <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/13 12:59:14 by gpanyana          #+#    #+#             */
-/*   Updated: 2019/06/13 13:35:02 by gpanyana         ###   ########.fr       */
+/*   Updated: 2019/06/25 18:43:22 by gpanyana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,5 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n)
 			return (str1[i] - str2[i]);
 		i++;
 	}
-	return (str1 - str2);
+	return (0);
 }

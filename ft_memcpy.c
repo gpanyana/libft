@@ -6,7 +6,7 @@
 /*   By: gpanyana <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/11 13:47:31 by gpanyana          #+#    #+#             */
-/*   Updated: 2019/06/13 18:16:53 by gpanyana         ###   ########.fr       */
+/*   Updated: 2019/06/25 18:36:35 by gpanyana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 	s1 = (unsigned char *)dst;
 	s2 = (unsigned char *)src;
+	if (!s1 && !s2)
+		return (NULL);
 	i = 0;
 	while (i < n)
 	{

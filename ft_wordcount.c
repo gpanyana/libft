@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_wordcount.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gpanyana <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/26 16:57:38 by gpanyana          #+#    #+#             */
-/*   Updated: 2019/05/28 10:21:27 by gpanyana         ###   ########.fr       */
+/*   Created: 2019/06/25 15:50:11 by gpanyana          #+#    #+#             */
+/*   Updated: 2019/06/25 17:15:49 by gpanyana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		main(void)
+size_t		ft_wordcount(const char *s, char c)
 {
-	char	*s;
-	char	*w;
+	size_t			wc;
+	unsigned int	i;
 
-	w = strdup("good");
-	ft_putstr(w);
-
-	ft_putchar('\n');
-	s = ft_strdup("hello");
-	ft_putstr(s);
-	return (0);
+	wc = 0;
+	i = 0;
+	while (s[i])
+	{
+		if (s[i] != c)
+			wc++;
+		while (s[i] != c && s[i + 1])
+		{
+			i++;
+		}
+		i++;
+	}
+	return (wc);
 }
